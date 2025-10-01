@@ -1,0 +1,86 @@
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+# for ceedling
+**/firmware/build/
+**/*.out
+
+# for MISRA check
+**/*.html
+
+# KDE specific
+.directory
+
+# Misc
+.svn
+*.bak
+*.dump
+*.ctu-info
+**/*.d
+**/*.backup
+firmware/cppcheck-addon-ctu-file-list
+
+# Harmony Content Manager may get into harmony folder if someone tries to run it.  We don't want it.
+**/harmony/contentmanager/
+**/harmony/content_manager_artifacts/
+**/harmony.hcm-settings.xml
+*.pyc
+
+#Remove python virtual environment created to run Harware In The Loop Testing
+**/my_venv/
+
+#remove build directories
+**/build/
+
+#remove MPLAB PRO _BUILD folder
+**/_build/
+.vscode/

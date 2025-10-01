@@ -40,7 +40,7 @@
     * This voltage is fed into port PB6 which is Analog Channel 2 (AN2) of the 12b SAR ADC on the WBZ451
 
 ## LEDs:
-* User LED D5: PB7
+* User LED D5 Blue: PB7
 * RGB  LED D6 Red: PB0
 * RGB  LED D6 Green: PB3
 * RGB  LED D6 Blue: PB5
