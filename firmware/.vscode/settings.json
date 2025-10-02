@@ -1,6 +1,12 @@
 {
     "mplab.clangd.arguments": [
-        "--compile-commands-dir=${workspaceFolder}\\_build\\wbz_c_pattern_project\\default"
+        "--compile-commands-dir=${workspaceFolder}/_build/wbz_c_pattern_project/default"
     ],
-    "mplab.clangd.path": "c:\\Program Files\\Microchip\\xc32\\v4.45\\bin\\xc32-clangd.exe"
+    "mplab.clangd.path": "/Applications/microchip/xc32/v4.45/bin/xc32-clangd",
+    "memory-inspector.debugTypes": [
+        "arm-debugger",
+        "embedded-debug",
+        "gdb",
+        "mplab-core-da"
+    ]
 }

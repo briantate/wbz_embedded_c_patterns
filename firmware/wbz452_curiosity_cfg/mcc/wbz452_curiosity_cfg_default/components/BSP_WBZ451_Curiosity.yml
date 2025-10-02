@@ -23,7 +23,7 @@ data:
       - attributes:
           id: BSP_WBZ451_Curiosity
           x: '5'
-          y: '149'
+          y: '33'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph

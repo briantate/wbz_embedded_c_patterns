@@ -43,7 +43,7 @@ data:
             id: name
           children:
           - type: Value
-            value: wireless_sensor.c
+            value: wireless_sensor_app.c
           type: String
         type: Attributes
       type: File
@@ -62,7 +62,7 @@ data:
             id: name
           children:
           - type: Value
-            value: wireless_sensor.h
+            value: wireless_sensor_app.h
           type: String
         type: Attributes
       type: File
@@ -712,7 +712,7 @@ data:
       children:
       - children:
         - attributes:
-            value: wireless_sensor
+            value: wireless_sensor_app
           type: User
         type: Values
       type: String

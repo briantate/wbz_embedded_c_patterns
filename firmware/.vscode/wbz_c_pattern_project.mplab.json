@@ -6,6 +6,7 @@
             "id": "conf1",
             "device": "WBZ451",
             "imagePath": "./out/wbz_c_pattern_project/default.elf",
+            "tool": "Curiosity/Starter Kits (PKOB4)",
             "packs": [
                 {
                     "name": "PIC32CX-BZ_DFP",
@@ -31,14 +32,6 @@
                 "compiler.isolate-each-function": true,
                 "compiler.place-data-into-section": true,
                 "compiler.optimization-level": "-O1",
-                "compiler.make-warnings-into-errors": true,
-                "compiler.additional-warnings": true,
-                "compiler++.isolate-each-function": true,
-                "compiler++.optimization-level": "-O1",
-                "linker.heap-size": "512",
-                "linker.remove-unused-sections": true,
-                "C32Global.mitcm": "",
-                "C32Global.mdtcm": "",
                 "compiler.extra-include-directories": [
                     "wbz452_curiosity_cfg/mcc",
                     "wbz452_curiosity_cfg/src",
@@ -49,8 +42,10 @@
                     "wbz452_curiosity_cfg/src/third_party/rtos/FreeRTOS/Source/include",
                     "wbz452_curiosity_cfg/src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F"
                 ],
-                "linker.no-device-startup-code": "true",
-                "C32Global.mstacktcm": "false",
+                "compiler.make-warnings-into-errors": true,
+                "compiler.additional-warnings": true,
+                "compiler++.isolate-each-function": true,
+                "compiler++.optimization-level": "-O1",
                 "compiler++.extra-include-directories": [
                     "wbz452_curiosity_cfg/mcc",
                     "wbz452_curiosity_cfg/src",
@@ -61,9 +56,15 @@
                     "wbz452_curiosity_cfg/src/third_party/rtos/FreeRTOS/Source/include",
                     "wbz452_curiosity_cfg/src/third_party/rtos/FreeRTOS/Source/portable/GCC/SAM/ARM_CM4F"
                 ],
+                "linker.heap-size": "512",
+                "linker.remove-unused-sections": true,
+                "linker.no-device-startup-code": "true",
                 "linker.preprocessor-macros": [
                     "VECTOR_REGION=boot_rom"
-                ]
+                ],
+                "C32Global.mitcm": "",
+                "C32Global.mdtcm": "",
+                "C32Global.mstacktcm": "false"
             }
         }
     ],
@@ -231,7 +232,12 @@
                 "wbz452_curiosity_cfg/src/config/default/user.h",
                 "wbz452_curiosity_cfg/src/config/default/configuration.h",
                 "wbz452_curiosity_cfg/src/config/default/sys_tasks.h",
-                "wbz452_curiosity_cfg/src/config/default/tasks.c"
+                "wbz452_curiosity_cfg/src/config/default/tasks.c",
+                "wbz452_curiosity_cfg/src/wireless_sensor_app.c",
+                "wbz452_curiosity_cfg/src/wireless_sensor_app.h",
+                "wbz452_curiosity_cfg/src/config/default/peripheral/sercom/usart/plib_sercom0_usart.h",
+                "wbz452_curiosity_cfg/src/config/default/peripheral/sercom/usart/plib_sercom_usart_common.h",
+                "wbz452_curiosity_cfg/src/config/default/peripheral/sercom/usart/plib_sercom0_usart.c"
             ]
         }
     ]

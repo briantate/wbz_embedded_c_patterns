@@ -61,16 +61,16 @@
 // *****************************************************************************
 // *****************************************************************************
 
-/* Handle for the WIRELESS_SENSOR_Tasks. */
-TaskHandle_t xWIRELESS_SENSOR_Tasks;
+/* Handle for the WIRELESS_SENSOR_APP_Tasks. */
+TaskHandle_t xWIRELESS_SENSOR_APP_Tasks;
 
 
 
-static void lWIRELESS_SENSOR_Tasks(  void *pvParameters  )
+static void lWIRELESS_SENSOR_APP_Tasks(  void *pvParameters  )
 {   
     while(true)
     {
-        WIRELESS_SENSOR_Tasks();
+        WIRELESS_SENSOR_APP_Tasks();
         vTaskDelay(1000U / portTICK_PERIOD_MS);
     }
 }
@@ -104,14 +104,14 @@ void SYS_Tasks ( void )
 
     /* Maintain the application's state machine. */
     
-    /* Create OS Thread for WIRELESS_SENSOR_Tasks. */
+    /* Create OS Thread for WIRELESS_SENSOR_APP_Tasks. */
     (void) xTaskCreate(
-           (TaskFunction_t) lWIRELESS_SENSOR_Tasks,
-           "WIRELESS_SENSOR_Tasks",
+           (TaskFunction_t) lWIRELESS_SENSOR_APP_Tasks,
+           "WIRELESS_SENSOR_APP_Tasks",
            1024,
            NULL,
            1U ,
-           &xWIRELESS_SENSOR_Tasks);
+           &xWIRELESS_SENSOR_APP_Tasks);
 
 
 

@@ -2,8 +2,8 @@
 
 manifest_file_version: 1.0.0
 project: wbz452_curiosity_cfg_default
-creation_date: 2025-10-01T11:43:35.980-05:00[America/Chicago]
-operating_system: Windows 11
+creation_date: 2025-10-02T11:36:03.434-05:00[America/Chicago]
+operating_system: Mac OS X
 mcc_mode: VSCodePlugin
 mcc_mode_version: Unknown
 device_name: WBZ451

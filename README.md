@@ -51,8 +51,8 @@
 
 ## UART:
 * The board has a single USB connection to a host which goes through an onboard USB2512B hub. The hub provides connection to an emedded debugger, as well as a MCP2200 USB-to-serial converter connected to the following pins:
-    * TX:  PA6, SERCOM0_PAD1
-    * RX:  PA5, SERCOM0_PAD0
+    * RX:  PA6, SERCOM0_PAD1
+    * TX:  PA5, SERCOM0_PAD0
     * RTS: PA4, SERCOM0_PAD3
     * CTS: PA3, SERCOM0_PAD2
 

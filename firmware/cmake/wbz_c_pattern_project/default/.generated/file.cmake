@@ -27,10 +27,12 @@ set(wbz_c_pattern_project_default_default_XC32_FILE_TYPE_compile
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../wbz452_curiosity_cfg/src/config/default/peripheral/evsys/plib_evsys.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../wbz452_curiosity_cfg/src/config/default/peripheral/gpio/plib_gpio.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../wbz452_curiosity_cfg/src/config/default/peripheral/nvic/plib_nvic.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../wbz452_curiosity_cfg/src/config/default/peripheral/sercom/usart/plib_sercom0_usart.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../wbz452_curiosity_cfg/src/config/default/startup_xc32.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../wbz452_curiosity_cfg/src/config/default/stdio/xc32_monitor.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../wbz452_curiosity_cfg/src/config/default/tasks.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../wbz452_curiosity_cfg/src/main.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../wbz452_curiosity_cfg/src/sensor_object_pattern.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../wbz452_curiosity_cfg/src/third_party/rtos/FreeRTOS/Source/FreeRTOS_tasks.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../wbz452_curiosity_cfg/src/third_party/rtos/FreeRTOS/Source/croutine.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../wbz452_curiosity_cfg/src/third_party/rtos/FreeRTOS/Source/event_groups.c"
@@ -40,7 +42,7 @@ set(wbz_c_pattern_project_default_default_XC32_FILE_TYPE_compile
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../wbz452_curiosity_cfg/src/third_party/rtos/FreeRTOS/Source/queue.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../wbz452_curiosity_cfg/src/third_party/rtos/FreeRTOS/Source/stream_buffer.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../wbz452_curiosity_cfg/src/third_party/rtos/FreeRTOS/Source/timers.c"
-    "${CMAKE_CURRENT_SOURCE_DIR}/../../../wbz452_curiosity_cfg/src/wireless_sensor.c")
+    "${CMAKE_CURRENT_SOURCE_DIR}/../../../wbz452_curiosity_cfg/src/wireless_sensor_app.c")
 set_source_files_properties(${wbz_c_pattern_project_default_default_XC32_FILE_TYPE_compile} PROPERTIES LANGUAGE C)
 set(wbz_c_pattern_project_default_default_XC32_FILE_TYPE_compile_cpp)
 set_source_files_properties(${wbz_c_pattern_project_default_default_XC32_FILE_TYPE_compile_cpp} PROPERTIES LANGUAGE CXX)

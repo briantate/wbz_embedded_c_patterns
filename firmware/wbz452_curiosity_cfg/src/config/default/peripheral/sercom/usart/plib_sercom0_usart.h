@@ -1,23 +1,26 @@
 /*******************************************************************************
- System Tasks Header File
+  SERCOM Universal Synchronous/Asynchrnous Receiver/Transmitter PLIB
 
-  File Name:
-    sys_tasks.h
+  Company
+    Microchip Technology Inc.
 
-  Summary:
-    This file contains declarations for task handles.
+  File Name
+    plib_sercom0_usart.h
 
-  Description:
-    Task handles declared in this header file can be used by the application
-    to control the behavior of the tasks.
+  Summary
+    USART peripheral library interface.
+
+  Description
+    This file defines the interface to the USART peripheral library. This
+    library provides access to and control of the associated peripheral
+    instance.
 
   Remarks:
-    None
- *******************************************************************************/
+    None.
+*******************************************************************************/
 
-// DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2023 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -37,11 +40,10 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
- *******************************************************************************/
-// DOM-IGNORE-END
+*******************************************************************************/
 
-#ifndef SYS_TASKS_H
-#define SYS_TASKS_H
+#ifndef PLIB_SERCOM0_USART_H // Guards against multiple inclusion
+#define PLIB_SERCOM0_USART_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -49,18 +51,65 @@
 // *****************************************************************************
 // *****************************************************************************
 
-#include "configuration.h"
-#include "definitions.h"
+#include "plib_sercom_usart_common.h"
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus // Provide C++ Compatibility
+
+    extern "C" {
+
+#endif
+// DOM-IGNORE-END
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: RTOS "Tasks" Handles
+// Section: Interface Routines
 // *****************************************************************************
 // *****************************************************************************
-/* Declaration of  WIRELESS_SENSOR_APP_Tasks task handle */
-extern TaskHandle_t xWIRELESS_SENSOR_APP_Tasks;
+
+void SERCOM0_USART_Initialize( void );
+
+bool SERCOM0_USART_SerialSetup( USART_SERIAL_SETUP * serialSetup, uint32_t clkFrequency );
+
+void SERCOM0_USART_Enable( void );
+
+void SERCOM0_USART_Disable( void );
+
+void SERCOM0_USART_TransmitterEnable( void );
+
+void SERCOM0_USART_TransmitterDisable( void );
+
+bool SERCOM0_USART_Write( void *buffer, const size_t size );
+
+bool SERCOM0_USART_TransmitComplete( void );
 
 
+bool SERCOM0_USART_TransmitterIsReady( void );
+
+void SERCOM0_USART_WriteByte( int data );
 
 
-#endif //SYS_TASKS_H
+void SERCOM0_USART_ReceiverEnable( void );
+
+void SERCOM0_USART_ReceiverDisable( void );
+
+bool SERCOM0_USART_Read( void *buffer, const size_t size );
+
+bool SERCOM0_USART_ReceiverIsReady( void );
+
+int SERCOM0_USART_ReadByte( void );
+
+USART_ERROR SERCOM0_USART_ErrorGet( void );
+
+uint32_t SERCOM0_USART_FrequencyGet( void );
+
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
+
+    }
+
+#endif
+// DOM-IGNORE-END
+
+#endif //PLIB_SERCOM0_USART_H

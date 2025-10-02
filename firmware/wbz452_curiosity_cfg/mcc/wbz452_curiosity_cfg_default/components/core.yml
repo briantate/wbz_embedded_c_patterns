@@ -1004,7 +1004,7 @@ data:
       children:
       - children:
         - attributes:
-            value: UART_RX
+            value: DEBUG_UART_TX
           type: User
         type: Values
       type: String
@@ -1014,10 +1014,416 @@ data:
       children:
       - children:
         - attributes:
-            value: UART_TX
+            value: DEBUG_UART_RX
           type: User
         type: Values
       type: String
+    SERCOM0_CORE_CLOCK_FREQUENCY:
+      attributes:
+        id: SERCOM0_CORE_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '64000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    GCLK_ID_3_FREQ:
+      attributes:
+        id: GCLK_ID_3_FREQ
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '64000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    CFGPCLKGEN1_REG:
+      attributes:
+        id: CFGPCLKGEN1_REG
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '36864'
+          type: Dynamic
+        type: Values
+      type: Hex
+    GCLK_ID_3_GENSEL:
+      attributes:
+        id: GCLK_ID_3_GENSEL
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    GCLK_ID_3_CHEN:
+      attributes:
+        id: GCLK_ID_3_CHEN
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    PMD3_REG_VALUE:
+      attributes:
+        id: PMD3_REG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '32766'
+          type: Dynamic
+        type: Values
+      type: Hex
+    SERCOM0_CORE_CLOCK_ENABLE:
+      attributes:
+        id: SERCOM0_CORE_CLOCK_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: sercom0
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    SERCOM0_INTERRUPT_ENABLE_UPDATE:
+      attributes:
+        id: SERCOM0_INTERRUPT_ENABLE_UPDATE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    NVIC_12_0_ENABLE:
+      attributes:
+        id: NVIC_12_0_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    SERCOM0_INTERRUPT_ENABLE:
+      attributes:
+        id: SERCOM0_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: sercom0
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    NVIC_12_0_HANDLER_LOCK:
+      attributes:
+        id: NVIC_12_0_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    SERCOM0_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: SERCOM0_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: sercom0
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    NVIC_12_0_HANDLER:
+      attributes:
+        id: NVIC_12_0_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: SERCOM0_Handler
+          type: Dynamic
+        type: Values
+      type: String
+    SERCOM0_INTERRUPT_HANDLER:
+      attributes:
+        id: SERCOM0_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: sercom0
+            value: SERCOM0_Handler
+          type: Dynamic
+        type: Values
+      type: String
+    USE_PPS_INPUT_0:
+      attributes:
+        id: USE_PPS_INPUT_0
+      children:
+      - children:
+        - attributes:
+            value: 'false'
+          type: User
+        type: Values
+      type: Boolean
+    SYS_PORT_PPS_INPUT_PIN_0:
+      attributes:
+        id: SYS_PORT_PPS_INPUT_PIN_0
+      children:
+      - children:
+        - attributes:
+            id: pairs
+          children:
+          - children:
+            - attributes:
+                description: RPB2
+                key: RPB2
+                value: '11'
+              type: Pair
+            - attributes:
+                description: RPB3
+                key: RPB3
+                value: '4'
+              type: Pair
+            - attributes:
+                description: RPB0
+                key: RPB0
+                value: '11'
+              type: Pair
+            - attributes:
+                description: RPA10
+                key: RPA10
+                value: '2'
+              type: Pair
+            - attributes:
+                description: RPB1
+                key: RPB1
+                value: '11'
+              type: Pair
+            - attributes:
+                description: RPA11
+                key: RPA11
+                value: '10'
+              type: Pair
+            - attributes:
+                description: RPB10
+                key: RPB10
+                value: '13'
+              type: Pair
+            - attributes:
+                description: RPB11
+                key: RPB11
+                value: '6'
+              type: Pair
+            - attributes:
+                description: RPA12
+                key: RPA12
+                value: '10'
+              type: Pair
+            - attributes:
+                description: RPB12
+                key: RPB12
+                value: '14'
+              type: Pair
+            - attributes:
+                description: RPA13
+                key: RPA13
+                value: '10'
+              type: Pair
+            - attributes:
+                description: RPA14
+                key: RPA14
+                value: '3'
+              type: Pair
+            - attributes:
+                description: RPB13
+                key: RPB13
+                value: '14'
+              type: Pair
+            - attributes:
+                description: RPB8
+                key: RPB8
+                value: '13'
+              type: Pair
+            - attributes:
+                description: RPB9
+                key: RPB9
+                value: '13'
+              type: Pair
+            - attributes:
+                description: RPB6
+                key: RPB6
+                value: '12'
+              type: Pair
+            - attributes:
+                description: RPB7
+                key: RPB7
+                value: '5'
+              type: Pair
+            - attributes:
+                description: RPB4
+                key: RPB4
+                value: '12'
+              type: Pair
+            - attributes:
+                description: RPB5
+                key: RPB5
+                value: '12'
+              type: Pair
+            - attributes:
+                description: RPA1
+                key: RPA1
+                value: '7'
+              type: Pair
+            - attributes:
+                description: RPA2
+                key: RPA2
+                value: '15'
+              type: Pair
+            - attributes:
+                description: RPA0
+                key: RPA0
+                value: '7'
+              type: Pair
+            - attributes:
+                description: RPA9
+                key: RPA9
+                value: '9'
+              type: Pair
+            - attributes:
+                description: RPA7
+                key: RPA7
+                value: '9'
+              type: Pair
+            - attributes:
+                description: RPA8
+                key: RPA8
+                value: '14'
+              type: Pair
+            - attributes:
+                description: RPA5
+                key: RPA5
+                value: '1'
+              type: Pair
+            - attributes:
+                description: RPA6
+                key: RPA6
+                value: '1'
+              type: Pair
+            - attributes:
+                description: RPA3
+                key: RPA3
+                value: '8'
+              type: Pair
+            - attributes:
+                description: RPA4
+                key: RPA4
+                value: '8'
+              type: Pair
+            type: Pairs
+          type: KeyValuePairList
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '25'
+          type: User
+        type: Values
+      type: KeyValueSet
+    SYS_PORT_PPS_INPUT_FUNCTION_0:
+      attributes:
+        id: SYS_PORT_PPS_INPUT_FUNCTION_0
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '5'
+          type: User
+        type: Values
+      type: KeyValueSet
+    SPLLCON_VALUE:
+      attributes:
+        id: SPLLCON_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '3221291272'
+          type: Dynamic
+        type: Values
+      type: Hex
+    SPLL2_FREQ:
+      attributes:
+        id: SPLL2_FREQ
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '8000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SPLLCON_SPLLPOSTDIV2_VALUE:
+      attributes:
+        id: SPLLCON_SPLLPOSTDIV2_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    ADCHS_CLOCK_FREQUENCY:
+      attributes:
+        id: ADCHS_CLOCK_FREQUENCY
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    PMD1_REG_VALUE:
+      attributes:
+        id: PMD1_REG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '536936911'
+          type: Dynamic
+        type: Values
+      type: Hex
   userData:
     children:
     - attributes:
