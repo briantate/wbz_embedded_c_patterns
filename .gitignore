@@ -83,4 +83,3 @@ firmware/cppcheck-addon-ctu-file-list
 
 #remove MPLAB PRO _BUILD folder
 **/_build/
-.vscode/
