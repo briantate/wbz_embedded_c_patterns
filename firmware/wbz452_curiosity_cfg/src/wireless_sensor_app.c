@@ -115,19 +115,13 @@ void WIRELESS_SENSOR_APP_Initialize ( void )
 
 void WIRELESS_SENSOR_APP_Tasks ( void )
 {
-
-    /* Check the application's current state. */
     switch ( wireless_sensor_appData.state )
     {
         /* Application's initial state. */
         case WIRELESS_SENSOR_APP_STATE_INIT:
         {
             bool appInitialized = true;
-
-
-            if (appInitialized)
-            {
-
+            if (appInitialized){
                 wireless_sensor_appData.state = WIRELESS_SENSOR_APP_STATE_SERVICE_TASKS;
             }
             break;
@@ -135,16 +129,12 @@ void WIRELESS_SENSOR_APP_Tasks ( void )
 
         case WIRELESS_SENSOR_APP_STATE_SERVICE_TASKS:
         {
-          SensorObj_Read(&temp_sensor);
           USER_LED_Toggle();
+          SensorObj_Read(&temp_sensor);
           printf("Raw temp: %d", temp_sensor.raw_temp);
             break;
         }
-
-        /* TODO: implement your application state machine.*/
-
-
-        /* The default state should never be executed. */
+        
         default:
         {
             /* TODO: Handle error in application's state machine. */

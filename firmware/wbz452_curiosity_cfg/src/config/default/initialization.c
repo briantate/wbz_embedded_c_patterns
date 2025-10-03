@@ -95,7 +95,7 @@
 #pragma config SMCLR =      NO_POR
 #pragma config QSCHE_EN =      OFF
 #pragma config QSPI_HSEN =      PPS
-#pragma config SCOM0_HSEN =      PPS
+#pragma config SCOM0_HSEN =      DIRECT
 #pragma config SCOM1_HSEN =      PPS
 #pragma config SCOM2_HSEN =      PPS
 #pragma config CCL_OE =      ON
@@ -248,9 +248,9 @@ void SYS_Initialize ( void* data )
 
 	GPIO_Initialize();
 
-    EVSYS_Initialize();
-
     SERCOM0_USART_Initialize();
+
+    EVSYS_Initialize();
 
 	BSP_Initialize();
 

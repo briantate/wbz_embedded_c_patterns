@@ -1424,6 +1424,16 @@ data:
           type: Dynamic
         type: Values
       type: Hex
+    CONFIG_SCOM0_HSEN:
+      attributes:
+        id: CONFIG_SCOM0_HSEN
+      children:
+      - children:
+        - attributes:
+            value: DIRECT
+          type: User
+        type: Values
+      type: Combo
   userData:
     children:
     - attributes:
