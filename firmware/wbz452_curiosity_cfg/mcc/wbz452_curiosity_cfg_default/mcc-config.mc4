@@ -9,6 +9,7 @@ modules:
 - BSP_WBZ451_Curiosity
 - FreeRTOS
 - HarmonyCore
+- adchs
 - cmsis
 - core
 - dfp
@@ -27,7 +28,7 @@ generatedFileHashHistoryMap:
 - file: ../src/config/default/configuration.h
   hash: 321175fed312776d5e0da9d63da1fca0673933ab0298c1d9a4aeb32cf5873639
 - file: ../src/config/default/definitions.h
-  hash: cb93565e5a8f63114d54a384efe215bfad62e8384096555f094218a2ea8d03f5
+  hash: ebcb6f5e22102a1f4d38cc4b326b30e3d1f0baebe58479bd8b5de4a7c366b42f
 - file: ../src/config/default/device.h
   hash: 18c259b5ec85d672983e87e53cfdc06ed2f22be3dec27c3b38b3db838508f3fa
 - file: ../src/config/default/device_cache.h
@@ -39,15 +40,21 @@ generatedFileHashHistoryMap:
 - file: ../src/config/default/freertos_hooks.c
   hash: c97b8f92ad60ff513a27ac7a27b3c6824b75005eb8f7b85fe5ae18deaf568c4e
 - file: ../src/config/default/initialization.c
-  hash: 00dd8f86b4fc5b45f3374d3c27bd48d76e47c6232b017b05e3cb2154a29c52e0
+  hash: 451cdcdef98586d881f34331e3535d6947e8c9022fbb1f8becc0b735253d76bf
 - file: ../src/config/default/interrupts.c
   hash: e0039bc79c4eb219c58e10e28c06f49095eb219dae1053a59c310035940cfb76
 - file: ../src/config/default/interrupts.h
   hash: 00b361432a2b79ca497cb058456448563187cab4cb8d2dfd251cf7d0668205a4
 - file: ../src/config/default/libc_syscalls.c
   hash: 88bb2e34c939601b5b7ad076556e3ee0fcedf388436b8cddb6d6fd3e9d07472f
+- file: ../src/config/default/peripheral/adchs/plib_adchs.c
+  hash: 9e61078d8d7685c3cba3809d82012e8df5b138ead4f68b79df50419f24e0c8a4
+- file: ../src/config/default/peripheral/adchs/plib_adchs.h
+  hash: 19b5b51dd98231b7c0b81bbfc816c29ad6cfe243618f591be76b81e0e506ac9a
+- file: ../src/config/default/peripheral/adchs/plib_adchs_common.h
+  hash: 77cf8b921cd2d3a46a5d0fc6083c740017555a194d1bb643e25053e85dd413cc
 - file: ../src/config/default/peripheral/clk/plib_clk.c
-  hash: 427cb96664fb0978d06dccb4be2fb8ee0b649a831ad0b8040b2de665cc9f0ab2
+  hash: ee01a0533ed734378501facb8346903516cb9cf030730d06cfbd2edb9e4855db
 - file: ../src/config/default/peripheral/clk/plib_clk.h
   hash: 2d1939a0da512a64fea40fffe4c2f30f2d3d16344591a807c5814fc1e67fcc01
 - file: ../src/config/default/peripheral/cmcc/plib_cmcc.c

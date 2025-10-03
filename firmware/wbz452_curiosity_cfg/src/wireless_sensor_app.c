@@ -113,6 +113,7 @@ void WIRELESS_SENSOR_APP_Initialize ( void )
     See prototype in wireless_sensor_app.h.
  */
 
+ // ***Note*** Harmony adds a vTaskDelay after this
 void WIRELESS_SENSOR_APP_Tasks ( void )
 {
     switch ( wireless_sensor_appData.state )
@@ -131,10 +132,10 @@ void WIRELESS_SENSOR_APP_Tasks ( void )
         {
           USER_LED_Toggle();
           SensorObj_Read(&temp_sensor);
-          printf("Raw temp: %d", temp_sensor.raw_temp);
+          printf("Temperature C: %.1f\r\n", temp_sensor.temperature_c);
             break;
         }
-        
+
         default:
         {
             /* TODO: Handle error in application's state machine. */

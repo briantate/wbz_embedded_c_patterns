@@ -248,6 +248,8 @@ void SYS_Initialize ( void* data )
 
 	GPIO_Initialize();
 
+    ADCHS_Initialize();
+
     SERCOM0_USART_Initialize();
 
     EVSYS_Initialize();

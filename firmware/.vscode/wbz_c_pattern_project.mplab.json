@@ -237,7 +237,10 @@
                 "wbz452_curiosity_cfg/src/wireless_sensor_app.h",
                 "wbz452_curiosity_cfg/src/config/default/peripheral/sercom/usart/plib_sercom0_usart.h",
                 "wbz452_curiosity_cfg/src/config/default/peripheral/sercom/usart/plib_sercom_usart_common.h",
-                "wbz452_curiosity_cfg/src/config/default/peripheral/sercom/usart/plib_sercom0_usart.c"
+                "wbz452_curiosity_cfg/src/config/default/peripheral/sercom/usart/plib_sercom0_usart.c",
+                "wbz452_curiosity_cfg/src/config/default/peripheral/adchs/plib_adchs.h",
+                "wbz452_curiosity_cfg/src/config/default/peripheral/adchs/plib_adchs_common.h",
+                "wbz452_curiosity_cfg/src/config/default/peripheral/adchs/plib_adchs.c"
             ]
         }
     ]

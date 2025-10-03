@@ -15,7 +15,9 @@ extern "C" {
 /*----structures------------------------------------------------------------- */
 
 typedef struct {
-    uint8_t raw_temp;
+    uint16_t adc_count;
+    float adc_voltage;
+    float temperature_c;
 }sensor_t;
 
 

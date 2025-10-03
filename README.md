@@ -29,6 +29,8 @@
 ![image](media/pinout.png)
 
 # MCC Configuration Project Graph
+* STDIO->SERCOM0
+    * Note*** by default, the PPS is enabled on SERCOM0 in DEVCFG1 fuse. I elected to change this to direct mode for high speed operation. You could also leave the fuse and configure the PPS peripheral since we aren't doing anything high speed
 
 ![image](media/ProjectGraph.png)
 
