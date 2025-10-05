@@ -29,8 +29,11 @@
 
 #include "wireless_sensor_app.h"
 #include "bsp/bsp.h"
-#include "sensor_object_pattern.h"
+// #include "sensor_object_pattern.h"
+#include "sensor_opaque_pattern.h"
+#include <alloca.h>
 #include <stdio.h>
+#include "peripheral/adchs/plib_adchs.h" //for adc channel number
 
 // *****************************************************************************
 // *****************************************************************************
@@ -55,7 +58,8 @@
 
 WIRELESS_SENSOR_APP_DATA wireless_sensor_appData;
 
-static sensor_t temp_sensor;
+// static sensor_t temp_sensor;
+struct temperature_sensor *temp_sensor;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -94,9 +98,12 @@ static sensor_t temp_sensor;
 void WIRELESS_SENSOR_APP_Initialize ( void )
 {
   printf("Wireless Sensor app\r\n");
+
     /* Place the App state machine in its initial state. */
     wireless_sensor_appData.state = WIRELESS_SENSOR_APP_STATE_INIT;
-    SensorObj_Init(&temp_sensor);
+    // SensorObj_Init(&temp_sensor);
+    temp_sensor = SensorOpaque_New();
+    SensorOpaque_Init(temp_sensor, ADCHS_CH2);
 
 
     /* TODO: Initialize your application's state machine and other
@@ -131,8 +138,9 @@ void WIRELESS_SENSOR_APP_Tasks ( void )
         case WIRELESS_SENSOR_APP_STATE_SERVICE_TASKS:
         {
           USER_LED_Toggle();
-          SensorObj_Read(&temp_sensor);
-          printf("Temperature C: %.1f\r\n", temp_sensor.temperature_c);
+          // SensorObj_Read(&temp_sensor);
+          float temperature_c = SensorOpaque_Read(temp_sensor);
+          printf("Temperature C: %.1f\r\n", temperature_c);
             break;
         }
 

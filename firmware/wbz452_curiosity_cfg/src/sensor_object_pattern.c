@@ -1,7 +1,6 @@
 #include "sensor_object_pattern.h"
 #include <string.h>
 #include "peripheral/adchs/plib_adchs.h"
-#include <stdio.h>
 
 #define ADC_VREF                (3300) //mV
 #define ADC_MAX_COUNT           (4095)
@@ -11,7 +10,6 @@
 int SensorObj_Init(sensor_t *self){
     memset(self, 0, sizeof(*self));
     return -1;
-    // ADCHS_ModulesEnable(ADCHS_MODULE7_MASK);
 }
 
 int SensorObj_DeInit(sensor_t *self){
@@ -22,7 +20,6 @@ int SensorObj_DeInit(sensor_t *self){
 int SensorObj_Read(sensor_t *self){
 
     ADCHS_GlobalEdgeConversionStart();
-    // ADCHS_ChannelConversionStart(ADCHS_CH2);
 
     while(!ADCHS_ChannelResultIsReady(ADCHS_CH2))
     {

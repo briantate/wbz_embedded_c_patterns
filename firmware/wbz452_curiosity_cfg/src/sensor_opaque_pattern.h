@@ -4,12 +4,13 @@
 
 /*----includes-------------------------------------------------------------- */
 #include <stdint.h>
+#include <stdlib.h>
 
 #define STACK_ALLOCATION        (1)
 #define HEAP_ALLOCATION         (2)
 #define STATIC_ALLOCATION       (3)
 
-#define MEMORY_ALLOCATION_METHOD STACK_ALLOCATION
+#define MEMORY_ALLOCATION_METHOD HEAP_ALLOCATION
 
 #ifdef __cplusplus  // Provide C++ Compatibility
 extern "C" {
@@ -17,14 +18,18 @@ extern "C" {
 
 
 /*----structures------------------------------------------------------------- */
-struct temp_sensor *temp_sensor_obj;
+struct temperature_sensor;
 
 
 /*----prototypes------------------------------------------------------------- */
+#if MEMORY_ALLOCATION_METHOD == STACK_ALLOCATION
 size_t SensorOpaque_size(void);
-int SensorOpaque_Init(sensor_t *self);
-int SensorOpaque_DeInit(sensor_t *self);
-int SensorOpaque_Read(sensor_t *self);
+#endif
+int SensorOpaque_Init(struct temperature_sensor *self, uint32_t adc_channel);
+int SensorOpaque_DeInit(struct temperature_sensor *self);
+float SensorOpaque_Read(struct temperature_sensor *self);
+struct temperature_sensor* SensorOpaque_New(void);
+void SensorOpaque_Free(struct temperature_sensor **self);
 
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus
