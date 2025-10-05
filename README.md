@@ -1,6 +1,6 @@
 
 # wbz_c_pattern_project
- * This project is used to explore concepts learned in the Udemy course "Embedded C Programming Design Patterns" by Martin Schroder
+ * This project is used to explore concepts learned in an embedded C design patterns course
 
 # Contents Summary
 
