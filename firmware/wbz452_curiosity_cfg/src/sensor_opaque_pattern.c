@@ -8,8 +8,6 @@
 #define SENSOR_V0C              (500) //mV
 #define SENSOR_T_COEFFICIENT    (10) //mv/C
 
-
-
 struct temperature_sensor{
     uint32_t channel;
     uint16_t adc_count;
@@ -17,11 +15,9 @@ struct temperature_sensor{
     float temperature_c;
 };
 
-#if MEMORY_ALLOCATION_METHOD == STACK_ALLOCATION
 size_t SensorOpaque_size(void){
     return sizeof(struct temperature_sensor);
 }
-#endif
 
 int SensorOpaque_Init(struct temperature_sensor *self, uint32_t adc_channel){
     memset(self, 0, sizeof(*self));

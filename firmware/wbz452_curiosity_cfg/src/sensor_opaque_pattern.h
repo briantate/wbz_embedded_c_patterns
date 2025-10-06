@@ -17,14 +17,17 @@ extern "C" {
 #endif
 
 
+/*----defines---------------------------------------------------------------- */
+
+
 /*----structures------------------------------------------------------------- */
 struct temperature_sensor;
 
 
 /*----prototypes------------------------------------------------------------- */
-#if MEMORY_ALLOCATION_METHOD == STACK_ALLOCATION
+
 size_t SensorOpaque_size(void);
-#endif
+
 int SensorOpaque_Init(struct temperature_sensor *self, uint32_t adc_channel);
 int SensorOpaque_DeInit(struct temperature_sensor *self);
 float SensorOpaque_Read(struct temperature_sensor *self);
